@@ -1,0 +1,34 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div class="card table-container">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Instructor</th>
+                    <th>Atendimento</th>
+                    <th>ver perfil</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for instructor in instructors %}
+                    <tr>
+                        <td>{{instructor.id}}</td>
+                        <td>{{instructor.name}}</td>
+                        <td>{{instructor.services}}</td>
+                        <td class="flex" >
+                            <a class="link" href="/instructors/{{instructor.id}}">+ ver mais</a>
+                            <form id="delete" action="/instructors?_method=DELETE" method="post">
+                                <input type="hidden" name="id" value="{{instructor.id}}">
+                                <button class="delete link" type="submit">Deletar</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock content %}

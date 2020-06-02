@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {% block head %}
+      <title>Gym Manager</title>
+    {% endblock %}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://gamepedia.cursecdn.com/astroneer_ptbr_gamepedia_ptbr/6/64/Favicon.ico"/>
+    <link rel="stylesheet" href="/style.css"/>
+  </head>
+  <body>
+
+    <header>
+      <div class="links">
+        <a href="/">Instructors</a>
+        <a class="" href="/members">Members</a>
+        <a class="" href="/instructors/create">adicionar</a>
+      </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+  </body>
+</html>
